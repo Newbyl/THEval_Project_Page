@@ -24,7 +24,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
+  <title>THEval: A Comprehensive Framework for Evaluating Talking Head Generation</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -52,21 +52,23 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">THEval: A Comprehensive Framework for Evaluating Talking Head Generation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">Nabyl Quignon</a><sup>1</sup><sup>†</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Baptiste Chopin</a><sup>1</sup><sup>†</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Yaohui Wang</a><sup>2</sup>,</span>
+                    <span class="author-block">
+                      <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Antitza Dantcheva</a><sup>1</sup></span>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block"><sup>1</sup>Inria  <sup>2</sup>Shanghai Artificial Intelligence Laboratory</span>
+                    <span class="eql-cntrb"><small><br><sup>†</sup>Corresponding authors</small></span>
                   </div>
 
                   <div class="column has-text-centered">
@@ -82,7 +84,7 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Supplementary PDF link 
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -91,7 +93,7 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
@@ -123,22 +125,37 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser Image -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
+      <img src="static/images/THEval.png" 
+           alt="Descriptive text about the image" 
+           id="tree"
+           style="width: 100%; height: auto;">
+      <p class="subtitle has-text-centered">
+        <p>
+          We introduce <strong>THEval</strong>, a comprehensive framework for evaluating <strong>Talking Head (TH) Generation</strong>. 
+          THEval assesses <em>video quality, naturalness, and synchronization</em> using a set of <strong>10 carefully designed metrics</strong>. 
+          By combining <em>algorithmic and perceptual</em> evaluations, it enables a fine-grained and objective assessment of TH generation models.
+
+          To address the limitations of existing evaluation methods, we structure THEval into three core <strong>evaluation dimensions</strong>. 
+          <em>Video Quality</em> measures aesthetic appeal and region-specific quality (mouth, eyes). 
+          <em>Naturalness</em> captures the realism of generated expressions, head motions, lip dynamics, and eyebrow movements. 
+          <em>Synchronization</em> evaluates the alignment between lip movements and speech, as well as silent lip stability.
+          For each dimension, we introduce a <strong>Metric Suite</strong>, ensuring an adaptive and fair assessment across different TH generation approaches. 
+          THEval also incorporates <strong>human preference studies</strong>, demonstrating strong correlation between its evaluation results and subjective user ratings.
+          Our experiments on <strong>state-of-the-art TH models</strong> highlight that while many methods achieve strong lip synchronization, 
+          challenges remain in generating <em>expressive and artifact-free</em> TH videos. 
+          THEval serves as a <strong>benchmarking tool</strong> to guide the development of more robust and trustworthy generative models, 
+          continuously evolving to assess new advancements in the field.
+        </p>
+      </p>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End Teaser Image -->
+
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -148,7 +165,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Video generation has achieved remarkable advancement, with generated videos increasingly resembling real ones. However, the rapid progress in generation has outpaced the development of adequate evaluation metrics. Currently, the assess-
+            ment of talking head generation primarily relies on limited metrics, evaluating general video quality, lip synchronization, as well as conducting user studies. Motivated by this, we propose a novel
+            evaluation framework comprising 10 metrics related to three dimensions: (i) video quality, (ii) naturalness, and (iii) synchronization. We place emphasis on algorithmic and perceptual considerations, enabling fine-grained analysis of factors
+            such as head movement complexity, facial behavior, as well as audio-visual alignment while being computationally efficient. Our extensive experiments on state-of-the-art models suggest that
+            while many algorithms excel in lip synchronization, they are challenged with generating expressiveness and artifact-free details. Our proposed
+            benchmarking framework is aimed at promoting the development of robust generative methods, as well as evaluating real datasets.
           </p>
         </div>
       </div>
@@ -157,128 +179,63 @@
 </section>
 <!-- End paper abstract -->
 
+</br>
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-centered has-text-centered is-3">THEval results on state-of-the-art Talking Head Generative Models</h2>
+    <div class="hero-body">
+      <img src="static/images/VOX_HDTF_RADAR.png" 
+           alt="Descriptive text about the image" 
+           id="tree"
+           style="width: 100%; height: auto;">
+      <p class="subtitle has-text-centered">
+        <p>
+          Results of our evaluation framework on HDTF and VoxCeleb2 dataset. Each metric result is normalized using min-max
+normalization to provide a clearer representation of where the five evaluated models perform best. We also invert metric where lower is better to higher is better for better comprehension.
+        </p>
+      </p>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
+</br>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-centered has-text-centered is-3">THEval Human Correlation</h2>
+    <div class="hero-body">
+      <img src="static/images/win_lose.png" 
+           alt="Descriptive text about the image" 
+           id="tree"
+           style="width: 100%; height: auto;">
+      <p class="subtitle has-text-centered">
+        <p>
+          To quantify the alignment between our metrics and human preferences, we first apply a ranking-based normalization
+approach based on models placement on metrics of THEval. For each metric, models are ranked from best to worst,
+assigning points of 1.0 for the first place, 0.8 for the second, 0.6 for the third, 0.4 for the fourth, and 0.2 for the fifth. We then
+aggregate the scores by averaging these normalized rankings across all metrics. Additionally, we normalize the human study
+preference scores to a [0,1] range. The resulting Pearson correlation coefficients of ρ=0.987 for HDTF and ρ=0.923 for
+VoxCeleb2 demonstrate a strong agreement between our combined metric scores and human evaluations.
+      </p>
+      </p>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
-<!--End paper poster -->
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{quignon2025theval,
+        title={THEval: A Comprehensive Framework for Evaluating Talking Head Generation},
+        author={Quignon, Nabyl and  Chopin, Baptiste and  Wang, Yaohui and Dantcheva, Antitza},
+        journal={arXiv preprint arXiv:2503.Complete},
+        year={2025}
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
